@@ -220,14 +220,14 @@ class dice_roll:
             plt.savefig(filename)
 
     @property
-    def df:
+    def df(self):
         '''
         Outputs the pmf or cmf to a pandas dataframe
         '''
         return DataFrame({'domain' : self.support,'pmf' : self.pmf,'cmf' : self.cmf}).set_index("domain")
         
     def __repr__(self):
-        return str(self.df())
+        return str(self.df)
     
     @property
     def mean(self):
