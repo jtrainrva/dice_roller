@@ -106,27 +106,32 @@ class dice_roll:
     def __add__(self,other):
         '''
         Adds the dicerolls in the array and returns a new array.
+        Also adds integers.
         '''
-        outroll = copy(self)
-        outroll.dice_rolls+=other.dice_rolls
-        outroll.pmf = convolve(outroll.pmf,other.pmf)
-        outroll.support = np.arange(outroll.support.min()+other.support.min(),outroll.support.max()+other.support.max()+1)
+        if isinstance(other,dice_roll):
             
-        return outroll
+            outroll = copy(self)
+            outroll.dice_rolls+=other.dice_rolls
+            outroll.pmf = convolve(outroll.pmf,other.pmf)
+            outroll.support = np.arange(outroll.support.min()+other.support.min(),outroll.support.max()+other.support.max()+1)
+                
+            return outroll
+        elif isinstance(other,int):
+            return self.apply_function(lambda x: x+other)
+        else:
+            raise TypeError("Can only add dice_roll to dice_roll or int")
     
     def __sub__(self,other):
         '''
         Adds the dicerolls in the array and returns a new array.
         '''
-        outroll = copy(self)
-        
-        temp = other.apply_function(lambda x: -x)
-        
-        outroll.dice_rolls+=temp.dice_rolls
-        outroll.pmf = convolve(outroll.pmf,temp.pmf)
-        outroll.support = np.arange(outroll.support.min()+temp.support.min(),outroll.support.max()+temp.support.max()+1)
-            
-        return outroll
+        if isinstance(other,dice_roll):
+            temp = other.apply_function(lambda x: -x)
+        elif isinstance(other,int):
+            temp = -1*other
+        else:
+            raise TypeError("Can only subtract dice_roll with dice_roll or int")
+        return self + temp
     
     def sum(self,k,drop=0):
         '''
