@@ -224,7 +224,9 @@ class dice_roll:
         '''
         Outputs the pmf or cmf to a pandas dataframe
         '''
-        return DataFrame({'domain' : self.support,'pmf' : self.pmf,'cmf' : self.cmf}).set_index("domain")
+        m = np.where(self.pmf)
+        
+        return DataFrame({'domain' : self.support[m],'pmf' : self.pmf[m],'cmf' : self.cmf[m]}).set_index("domain")
         
     def __repr__(self):
         return str(self.df)
