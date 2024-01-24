@@ -8,7 +8,7 @@ with open("requirements.txt", "r") as fh:
 
 setuptools.setup(
     name="dice_roll",
-    version="0.1",
+    version="0.1.1",
     author="Joseph Burris",
     author_email="jtrainrva@gmail.com",
     description="Train's Dice Stats Package",
