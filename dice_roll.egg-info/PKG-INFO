@@ -2,7 +2,7 @@ Metadata-Version: 2.1
 Name: dice_roll
 Version: 0.1
 Summary: Train's Dice Stats Package
-Home-page: https://github.com/jtrainrva/dice_roll
+Home-page: https://github.com/jtrainrva/dice_roller
 Author: Joseph Burris
 Author-email: jtrainrva@gmail.com
 Keywords: python,dice
@@ -66,7 +66,7 @@ You can plot the distribution with the `plot` method.
 dndDrop_modifiers.plot(title="4d6 Drop Lowest Stat Modifiers")
 ```
 
-![4d6 Drop Lowest Stat Modifiers Plot](dndDrop_modifiers.png)
+![4d6 Drop Lowest Stat Modifiers Plot](https://github.com/jtrainrva/dice_roller/blob/main/dndarray_modifiers.png?raw=True)
 
 `dice_roll` supports mean, median, and mode.
 
@@ -81,7 +81,7 @@ dndDrop_modifiers.plot(title="4d6 Drop Lowest Stat Modifiers")
 Quantiles are also availible with the `quantile` method.
 
 ```
-dndDrop_modifiers.quantiles([.05,.95])
+dndDrop_modifiers.quantile([.05,.95])
 ```
 
 ```
@@ -126,7 +126,7 @@ You can compute the sum of a sample of size `k` from a dice_roll object using th
 dndDrop.sum(6,drop=2).plot(title="D&D Stat Array Total Modifiers with Two Dump Stats")
 ```
 
-![D&D Stat Array Total Modifiers with Two Dump](dndarray_modifiers_dumpstats.png)
+![D&D Stat Array Total Modifiers with Two Dump](https://github.com/jtrainrva/dice_roller/blob/main/dndarray_modifiers_dumpstats.png?raw=True)
 
 Lastly, you can export the table of support, pmf and cmf to a Pandas datafram with the `df` method.
 

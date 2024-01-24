@@ -16,7 +16,7 @@ setuptools.setup(
     install_requires=requires,
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/jtrainrva/dice_roll",
+    url="https://github.com/jtrainrva/dice_roller",
     packages=setuptools.find_packages(),
     keywords=['python','dice'],
     classifiers=[
