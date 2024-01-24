@@ -1,0 +1,7 @@
+README.md
+setup.py
+dice_roll.egg-info/PKG-INFO
+dice_roll.egg-info/SOURCES.txt
+dice_roll.egg-info/dependency_links.txt
+dice_roll.egg-info/requires.txt
+dice_roll.egg-info/top_level.txt

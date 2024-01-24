@@ -7,8 +7,8 @@ with open("requirements.txt", "r") as fh:
     requires = [line for line in fh.read().splitlines() if line != ""]
 
 setuptools.setup(
-    name="ao3-api",
-    version="2.4.0",
+    name="dice_roll",
+    version="0.1",
     author="Joseph Burris",
     author_email="jtrainrva@gmail.com",
     description="Train's Dice Stats Package",
