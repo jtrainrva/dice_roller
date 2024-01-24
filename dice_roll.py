@@ -197,12 +197,11 @@ class dice_roll:
         '''
         outroll = copy(self)
         
-        fd = func(self.support)
-        # Map to
+        fd = func(self.support).astype(int)
         
-        # Accumulate
-        outroll.pmf = np.array([np.sum(outroll.pmf[fd==f]) for f in np.sort(np.unique(fd))])
-        outroll.support = np.sort(np.unique(fd)).astype(int)
+        outroll.support = np.arange(fd.min(),fd.max()+1)
+        outroll.pmf = np.array([np.sum(outroll.pmf[fd==f]) for f in outroll.support])
+        
         return outroll
         
     def plot(self,pmf=True,title="",filename=False):
