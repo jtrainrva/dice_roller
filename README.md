@@ -64,7 +64,7 @@ dndDrop_modifiers.plot(title="4d6 Drop Lowest Stat Modifiers")
 Quantiles are also availible with the `quantile` method.
 
 ```
-dndDrop_modifiers.quantiles([.05,.95])
+dndDrop_modifiers.quantile([.05,.95])
 ```
 
 ```

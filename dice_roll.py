@@ -241,9 +241,9 @@ class dice_roll:
 
     @property
     def median(self):
-        return self.quantiles([.5])[0]
+        return self.quantile([.5])[0]
 
-    def quantiles(self,q=[0,0.25,0.5,.75,1]):
+    def quantile(self,q=[0,0.25,0.5,.75,1]):
         return self.support[[np.min(np.where(self.cmf>=qq)) for qq in q]]
     
     @property
