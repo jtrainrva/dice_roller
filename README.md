@@ -49,7 +49,7 @@ You can plot the distribution with the `plot` method.
 dndDrop_modifiers.plot(title="4d6 Drop Lowest Stat Modifiers")
 ```
 
-![4d6 Drop Lowest Stat Modifiers Plot](https://raw.githubusercontent.com/jtrainrva/dice_roller/main/dndDrop_modifiers.png)
+![4d6 Drop Lowest Stat Modifiers Plot](https://github.com/jtrainrva/dice_roller/blob/main/dndarray_modifiers.png?raw=True)
 
 `dice_roll` supports mean, median, and mode.
 
@@ -109,7 +109,7 @@ You can compute the sum of a sample of size `k` from a dice_roll object using th
 dndDrop.sum(6,drop=2).plot(title="D&D Stat Array Total Modifiers with Two Dump Stats")
 ```
 
-![D&D Stat Array Total Modifiers with Two Dump](https://raw.githubusercontent.com/jtrainrva/dice_roller/main/dndarray_modifiers_dumpstats.png)
+![D&D Stat Array Total Modifiers with Two Dump](https://github.com/jtrainrva/dice_roller/blob/main/dndarray_modifiers_dumpstats.png?raw=True)
 
 Lastly, you can export the table of support, pmf and cmf to a Pandas datafram with the `df` method.
 
