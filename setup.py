@@ -20,7 +20,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     keywords=['python','dice'],
     classifiers=[
-        "Programming Language :: Python :: 3"
+        "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",
     ],
 )
