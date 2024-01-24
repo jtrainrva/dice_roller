@@ -49,7 +49,7 @@ You can plot the distribution with the `plot` method.
 dndDrop_modifiers.plot(title="4d6 Drop Lowest Stat Modifiers")
 ```
 
-![4d6 Drop Lowest Stat Modifiers Plot](https://github.com/jtrainrva/dice_roller/blob/main/dndarray_modifiers.png?raw=True)
+![4d6 Drop Lowest Stat Modifiers Plot](https://github.com/jtrainrva/dice_roller/blob/main/dndDrop_modifiers.png?raw=True)
 
 `dice_roll` supports mean, median, and mode.
 
